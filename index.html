@@ -1,0 +1,469 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f1e8">
+<title>عبدالرحمن & هاجر | دعوة زفاف</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:#f6f1e8;
+  --paper:#fffdf8;
+  --olive:#66705a;
+  --deep:#30392f;
+  --gold:#b69a62;
+  --muted:#77766d;
+  --line:#e2d8c5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--deep);font-family:"Cairo",sans-serif}
+a{color:inherit}
+.topline{height:5px;background:linear-gradient(90deg,var(--olive),var(--gold),var(--olive))}
+.hero{
+  min-height:100svh;display:grid;place-items:center;padding:32px 18px;
+  position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 15%,#fffdf8 0,transparent 58%),var(--cream)
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;width:270px;height:390px;
+  border:1px solid #b69a624d;border-radius:50%;transform:rotate(36deg);
+  pointer-events:none
+}
+.hero:before{top:-175px;right:-95px}
+.hero:after{bottom:-200px;left:-95px;transform:rotate(-36deg)}
+.hero-card{
+  width:min(100%,680px);text-align:center;
+  padding:clamp(30px,7vw,70px) clamp(20px,6vw,58px);
+  border:1px solid var(--gold);outline:1px solid #b69a6255;
+  outline-offset:7px;background:#fffdf8d9;position:relative;z-index:1;
+  animation:rise 1s ease both
+}
+.eyebrow{letter-spacing:.18em;color:var(--olive);font-size:.75rem;font-weight:600}
+.small-flower{color:var(--gold);font-size:30px;margin:18px 0}
+h1,h2,.names{font-family:"Amiri",serif;font-weight:400}
+.names{font-size:clamp(2.8rem,9vw,5.6rem);line-height:1.3;margin:5px 0;color:var(--deep)}
+.amp{font-size:.58em;color:var(--gold);padding:0 .18em}
+.intro{font-size:1rem;line-height:2;color:var(--muted);max-width:440px;margin:18px auto 28px}
+.date-pill{display:inline-block;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:12px 28px;color:var(--olive);font-weight:600;letter-spacing:.06em}
+.open-link{display:inline-block;margin-top:30px;text-decoration:none;border:1px solid var(--olive);padding:11px 28px;color:var(--olive);transition:.25s}
+.open-link:hover{background:var(--olive);color:white}
+.scroll-note{position:absolute;bottom:18px;font-size:.72rem;color:var(--muted);letter-spacing:.1em}
+section{padding:78px 18px}
+.section-inner{max-width:900px;margin:auto}
+.section-label{text-align:center;color:var(--gold);letter-spacing:.2em;font-size:.72rem;font-weight:700}
+h2{text-align:center;font-size:clamp(2rem,6vw,3.2rem);margin:8px 0 16px}
+.sub{text-align:center;color:var(--muted);line-height:2;margin:0 auto 34px;max-width:580px}
+.count-section{background:var(--deep);color:var(--paper)}
+.count-section .section-label{color:#d4bd87}
+.count-section .sub{color:#d5d3c9}
+.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.timebox{min-width:92px;padding:18px 12px;border:1px solid #b69a6280;background:#ffffff08}
+.timebox strong{display:block;font-size:2rem;font-weight:400;font-family:"Amiri",serif;color:#e0cc9c}
+.timebox span{font-size:.78rem;color:#e8e4d9}
+.details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.detail{background:var(--paper);border:1px solid var(--line);padding:28px 18px;text-align:center}
+.detail .icon{font-size:25px;color:var(--gold)}
+.detail h3{font-size:1rem;color:var(--olive);margin:12px 0 6px}
+.detail p{margin:0;line-height:1.9;color:var(--muted);font-size:.95rem}
+.schedule{max-width:650px;margin:32px auto 0;border-right:1px solid var(--gold);padding-right:24px}
+.schedule-item{position:relative;margin:0 0 26px}
+.schedule-item:before{content:"";position:absolute;right:-30px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--cream)}
+.schedule-item strong{color:var(--olive)}
+.schedule-item p{margin:5px 0;color:var(--muted);line-height:1.8}
+.quote{background:#eae4d7;text-align:center}
+.quote-mark{font-family:Georgia,serif;font-size:4rem;line-height:.7;color:var(--gold)}
+.quote blockquote{font-family:"Amiri",serif;font-size:clamp(1.45rem,4vw,2.1rem);line-height:1.8;max-width:720px;margin:24px auto 10px}
+.quote .signature{color:var(--olive);font-size:.9rem}
+.map-card{background:var(--paper);border:1px solid var(--line);text-align:center;padding:36px 20px;max-width:650px;margin:auto}
+.map-button,.rsvp-button{display:inline-block;text-decoration:none;background:var(--olive);color:white;padding:13px 26px;margin-top:18px;transition:.25s}
+.map-button:hover,.rsvp-button:hover{background:var(--deep)}
+.rsvp{background:#ebe5d9;text-align:center}
+.rsvp-note{max-width:550px;margin:0 auto;color:var(--muted);line-height:2}
+footer{text-align:center;padding:32px 18px;background:var(--deep);color:#e9e2d4}
+footer .footer-names{font-family:"Amiri",serif;font-size:1.8rem;color:#dfc98f}
+footer p{font-size:.8rem;color:#c9c8bc}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+body.closed{overflow:hidden}
+body.closed>.topline,body.closed>header,body.closed>main,body.closed>footer{display:none}
+
+.opening-screen{
+  position:fixed;inset:0;z-index:9999;display:grid;place-items:center;
+  padding:22px;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 20%,#fffdf9 0%,#f6f1e8 58%,#e9e0d0 100%);
+  transition:opacity .8s ease,visibility .8s ease
+}
+.opening-screen:before,.opening-screen:after{
+  content:"";position:absolute;width:260px;height:390px;border:1px solid #b69a624d;
+  border-radius:50%;pointer-events:none
+}
+.opening-screen:before{top:-180px;left:-95px;transform:rotate(-35deg)}
+.opening-screen:after{bottom:-210px;right:-85px;transform:rotate(35deg)}
+.opening-frame{
+  position:relative;z-index:2;width:min(100%,560px);max-height:94svh;overflow-y:auto;
+  padding:clamp(24px,5vh,48px) 20px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  background:#fffdf8d9;border:1px solid var(--gold);outline:1px solid #b69a6255;
+  outline-offset:7px;box-shadow:0 20px 60px #443a2510
+}
+.opening-ornament{font-family:Georgia,serif;font-size:40px;color:var(--gold);line-height:1;margin-bottom:12px}
+.opening-kicker{font-size:.67rem;letter-spacing:.22em;color:var(--olive);font-weight:700}
+.opening-arabic{font-family:"Amiri",serif;color:var(--gold);font-size:1.4rem;margin-top:14px}
+.opening-names{font-family:"Amiri",serif;font-size:clamp(2.25rem,8vw,4rem);line-height:1.35;margin:3px 0;color:var(--deep)}
+.opening-names span{color:var(--gold);font-size:.65em;padding:0 .12em}
+.opening-rule{display:flex;align-items:center;gap:12px;color:var(--gold);margin:8px 0}
+.opening-rule i{width:46px;height:1px;background:var(--gold);display:block}
+.opening-date{letter-spacing:.2em;font-size:.9rem;color:var(--olive);margin:4px 0}
+.opening-caption{color:var(--muted);font-size:.9rem;line-height:1.9;margin:10px 0 16px}
+.click-here{
+  border:1px solid var(--olive);background:var(--olive);color:white;padding:13px 27px;
+  min-width:170px;font:600 .78rem "Cairo",sans-serif;letter-spacing:.12em;
+  cursor:pointer;transition:transform .25s,background .25s
+}
+.click-here span{margin-left:10px;font-size:1rem}
+.click-here:hover{background:var(--deep);transform:translateY(-2px)}
+.opening-footer{margin-top:18px;color:#99927f;font-size:.57rem;letter-spacing:.16em}
+.opening-screen.leaving{opacity:0;visibility:hidden;pointer-events:none}
+
+/* Floating hearts */
+.floating-hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.floating-heart{
+  position:absolute;bottom:-45px;color:var(--gold);opacity:0;
+  animation:heartFloat linear forwards;text-shadow:0 2px 10px #b69a6220
+}
+@keyframes heartFloat{
+  0%{transform:translateY(0) rotate(0deg) scale(.7);opacity:0}
+  15%{opacity:.65}
+  80%{opacity:.5}
+  100%{transform:translateY(-110svh) rotate(35deg) scale(1.2);opacity:0}
+}
+
+/* Cartoon bride and groom */
+.cartoon-couple{width:min(220px,62vw);height:auto;margin:5px auto 7px;display:block;overflow:visible;filter:drop-shadow(0 8px 10px #75644712)}
+
+/* Extra invitation cards */
+.extra-slides{background:var(--paper)}
+.slide-deck{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.mini-slide{
+  position:relative;overflow:hidden;min-height:230px;padding:26px 20px;text-align:center;
+  border:1px solid var(--line);background:linear-gradient(145deg,#fffdf8,#eee6d7);
+  display:flex;flex-direction:column;align-items:center;justify-content:center
+}
+.mini-slide:nth-child(2){background:linear-gradient(145deg,#e9eadf,#f8f3e8)}
+.mini-slide:nth-child(3){background:linear-gradient(145deg,#f2e7d8,#fffaf2)}
+.mini-slide:before{content:"";position:absolute;width:140px;height:180px;border:1px solid #b69a6244;border-radius:50%;transform:rotate(38deg);top:-100px;right:-35px}
+.mini-slide .slide-icon{font-size:2rem;color:var(--gold);margin-bottom:12px}
+.mini-slide h3{font-family:"Amiri",serif;font-size:1.6rem;font-weight:400;margin:0 0 8px}
+.mini-slide p{font-size:.88rem;color:var(--muted);line-height:1.9;margin:0}
+.slide-number{position:absolute;bottom:12px;font-size:.62rem;letter-spacing:.2em;color:#9a927e}
+
+@media(max-width:650px){
+  .details-grid{grid-template-columns:1fr}
+  .detail{padding:22px}
+  .timebox{min-width:72px;padding:14px 8px}
+  .timebox strong{font-size:1.6rem}
+  section{padding:60px 16px}
+  .hero-card{outline-offset:4px}
+  .slide-deck{grid-template-columns:1fr}
+  .mini-slide{min-height:180px}
+  .opening-frame{min-height:80svh;padding:22px 16px}
+  .opening-footer{font-size:.52rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .floating-heart{display:none}
+}
+</style>
+</head>
+
+<body class="closed">
+
+<div class="opening-screen" id="openingScreen">
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <div class="opening-frame">
+    <div class="opening-ornament">❧</div>
+    <div class="opening-kicker">A SPECIAL INVITATION</div>
+
+    <svg class="cartoon-couple" viewBox="0 0 260 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم كرتوني للعريس والعروسة">
+      <circle cx="130" cy="100" r="88" fill="#f0eadf"/>
+      <circle cx="130" cy="100" r="76" fill="none" stroke="#b69a62" stroke-opacity=".5"/>
+
+      <!-- طرحة العروسة -->
+      <path d="M130 65 Q166 35 185 80 L201 177 Q164 193 135 175 Z" fill="#fffdf8" stroke="#e2d8c5" stroke-width="1.5"/>
+
+      <!-- العريس -->
+      <path d="M52 63 Q52 26 83 29 Q111 27 116 61 L110 87 L57 86 Z" fill="#44352f"/>
+      <ellipse cx="84" cy="69" rx="29" ry="35" fill="#dca985"/>
+      <path d="M56 58 Q57 30 83 31 Q106 30 112 54 L98 48 L88 57 L77 47 L65 60 Z" fill="#44352f"/>
+      <circle cx="74" cy="69" r="2.3" fill="#44352f"/>
+      <circle cx="94" cy="69" r="2.3" fill="#44352f"/>
+      <path d="M77 82 Q84 88 92 81" fill="none" stroke="#9e6255" stroke-width="2" stroke-linecap="round"/>
+      <path d="M45 157 L48 117 Q55 101 72 99 L84 115 L96 99 Q113 103 121 119 L124 176 L44 176 Z" fill="#465344"/>
+      <path d="M72 100 L84 115 L96 100 L92 153 L77 153 Z" fill="#fffdf8"/>
+      <path d="M82 115 L87 115 L91 126 L85 146 L80 126 Z" fill="#b69a62"/>
+
+      <!-- العروسة -->
+      <path d="M112 78 Q109 35 143 34 Q176 34 178 73 L172 111 L119 111 Z" fill="#513a31"/>
+      <ellipse cx="146" cy="75" rx="29" ry="35" fill="#edc3a5"/>
+      <path d="M117 68 Q115 36 143 36 Q173 34 175 65 L165 56 L155 48 L143 56 L131 49 L120 67 Z" fill="#513a31"/>
+      <circle cx="136" cy="75" r="2.2" fill="#513a31"/>
+      <circle cx="156" cy="75" r="2.2" fill="#513a31"/>
+      <path d="M139 87 Q146 93 153 87" fill="none" stroke="#b66f71" stroke-width="2" stroke-linecap="round"/>
+      <path d="M124 108 Q136 101 146 108 Q157 101 169 108 L191 178 Q146 196 105 178 Z" fill="#fffdf8" stroke="#e2d8c5" stroke-width="1.5"/>
+      <path d="M146 111 L146 181" stroke="#e2d8c5" stroke-width="1.5"/>
+      <path d="M120 151 Q146 162 174 151" fill="none" stroke="#b69a62" stroke-opacity=".7"/>
+
+      <!-- باقة الورد -->
+      <path d="M124 151 L135 173" stroke="#66705a" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="119" cy="147" r="8" fill="#d8a4a5"/>
+      <circle cx="131" cy="145" r="8" fill="#f3d9d8"/>
+      <circle cx="125" cy="137" r="8" fill="#fffdf8" stroke="#d8c8a9"/>
+      <circle cx="125" cy="145" r="4" fill="#b69a62"/>
+
+      <text x="34" y="108" font-size="18" fill="#b69a62">♡</text>
+      <text x="202" y="62" font-size="20" fill="#b69a62">♡</text>
+      <text x="199" y="125" font-size="13" fill="#b69a62">✦</text>
+    </svg>
+
+    <div class="opening-arabic">دعوة فرح</div>
+    <div class="opening-names">عبدالرحمن <span>&amp;</span> هاجر</div>
+    <div class="opening-rule"><i></i> ✦ <i></i></div>
+    <p class="opening-date">13 · 11 · 2026</p>
+    <p class="opening-caption">يسعدنا دعوتكم لمشاركتنا أجمل أيام العمر</p>
+    <button class="click-here" id="openInvitation" type="button">CLICK HERE <span>↗</span></button>
+    <div class="opening-footer">WITH LOVE, FOR OUR FAVOURITE PEOPLE</div>
+  </div>
+</div>
+
+<!-- ضع ملف النشيد باسم nasheed.mp3 بجانب index.html -->
+<audio id="weddingNasheed" loop preload="none">
+  <source src="nasheed.mp3" type="audio/mpeg">
+</audio>
+
+<div class="topline"></div>
+<header class="hero" id="home">
+  <div class="hero-card">
+    <div class="eyebrow">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم</div>
+    <div class="small-flower">✦</div>
+    <div class="eyebrow">بكل الحب، ندعوكم لمشاركتنا فرحتنا</div>
+    <h1 class="names">عبدالرحمن <span class="amp">&amp;</span> هاجر</h1>
+    <p class="intro">بداية حكاية جديدة، وأجمل لحظاتها تكتمل بوجودكم معنا.<br>يسعدنا أن تكونوا جزءًا من يومنا المميز.</p>
+    <div class="date-pill">الجمعة · 13 نوفمبر 2026</div>
+    <div><a class="open-link" href="#details">اكتشفوا تفاصيل اليوم ↓</a></div>
+  </div>
+  <div class="scroll-note">A DAY TO REMEMBER</div>
+</header>
+
+<main>
+  <section class="count-section" id="countdown">
+    <div class="section-inner reveal">
+      <div class="section-label">THE BIG DAY</div>
+      <h2>باقي على فرحتنا</h2>
+      <p class="sub">كل لحظة تقرّبنا من اليوم اللي هنحتفل فيه مع أغلى الناس.</p>
+      <div class="countdown" aria-live="polite">
+        <div class="timebox"><strong id="days">--</strong><span>يوم</span></div>
+        <div class="timebox"><strong id="hours">--</strong><span>ساعة</span></div>
+        <div class="timebox"><strong id="minutes">--</strong><span>دقيقة</span></div>
+        <div class="timebox"><strong id="seconds">--</strong><span>ثانية</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="section-inner reveal">
+      <div class="section-label">SAVE THE DATE</div>
+      <h2>تفاصيل دعوتنا</h2>
+      <p class="sub">احتفظوا بالموعد، ومستنيينكم تشاركونا فرحتنا.</p>
+      <div class="details-grid">
+        <article class="detail"><div class="icon">✧</div><h3>التاريخ</h3><p>الجمعة<br>13 نوفمبر 2026</p></article>
+        <article class="detail"><div class="icon">◷</div><h3>الوقت</h3><p>من 3:00 مساءً<br>إلى 6:00 مساءً</p></article>
+        <article class="detail"><div class="icon">⌖</div><h3>المكان</h3><p>قاعة White Hall<br>يسعدنا حضوركم</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="section-inner reveal">
+      <div class="quote-mark">“</div>
+      <blockquote>بعض الأيام تصبح ذكرى جميلة،<br>وبعضها يبدأ منها العمر كله.</blockquote>
+      <div class="signature">نتمنى أن تشاركونا بداية حكايتنا</div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="section-inner reveal">
+      <div class="section-label">THE CELEBRATION</div>
+      <h2>موعدنا مع الفرحة</h2>
+      <p class="sub">هنكون مبسوطين بوجودكم معانا طوال وقت الاحتفال.</p>
+      <div class="schedule">
+        <div class="schedule-item"><strong>3:00 مساءً</strong><p>بداية استقبال الضيوف</p></div>
+        <div class="schedule-item"><strong>وقت الاحتفال</strong><p>فرحتنا تكمل بوجودكم وصورنا وذكرياتنا سوا.</p></div>
+        <div class="schedule-item"><strong>6:00 مساءً</strong><p>ختام الاحتفال — شكرًا لأنكم شاركتونا يومنا.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" style="background:#f0eadf">
+    <div class="section-inner reveal">
+      <div class="section-label">FIND US</div>
+      <h2>مستنيينكم في White Hall</h2>
+      <p class="sub">اضغط على الزر لفتح موقع القاعة على الخريطة.</p>
+      <div class="map-card">
+        <div class="icon" style="font-size:30px;color:var(--gold)">⌖</div>
+        <h3>قاعة White Hall</h3>
+        <p style="color:var(--muted);line-height:1.9">الجمعة 13 نوفمبر 2026<br>من 3 مساءً إلى 6 مساءً</p>
+        <a class="map-button" href="https://maps.app.goo.gl/UJx8rXFPTttcHjQU6" target="_blank" rel="noopener">افتح الموقع على Google Maps ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="extra-slides" id="little-details">
+    <div class="section-inner reveal">
+      <div class="section-label">LITTLE MOMENTS, BIG LOVE</div>
+      <h2>تفاصيل صغيرة لفرحة كبيرة</h2>
+      <p class="sub">ثلاث حاجات نفسنا نفتكرها دايمًا من اليوم ده — والأجمل إنكم هتكونوا جزء منها.</p>
+      <div class="slide-deck">
+        <article class="mini-slide"><div class="slide-icon">♡</div><h3>حكاية بتبدأ</h3><p>خطوة جديدة، وأمنيات كتير، وقلبين مستنيين يشاركوا فرحتهم معاكم.</p><div class="slide-number">01 — OUR BEGINNING</div></article>
+        <article class="mini-slide"><div class="slide-icon">✧</div><h3>الذكرى الأحلى</h3><p>ضحكة من القلب، صورة تجمعنا، ولحظة حلوة تفضل في البال سنين.</p><div class="slide-number">02 — THE MEMORIES</div></article>
+        <article class="mini-slide"><div class="slide-icon">❦</div><h3>وجودكم فرق</h3><p>الفرحة مش بالمكان ولا بالتفاصيل، الفرحة الحقيقية بالناس اللي بنحبهم.</p><div class="slide-number">03 — WITH OUR PEOPLE</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="dress-code" style="background:#f0eadf">
+    <div class="section-inner reveal">
+      <div class="section-label">A LITTLE STYLE NOTE</div>
+      <h2>خلّوا الأناقة على ذوقكم</h2>
+      <p class="sub">اختاروا لبسكم اللي بتحبوه وتعالوا مستعدين ليوم مليان صور وضحك وذكريات حلوة.</p>
+      <div class="map-card">
+        <div style="font-size:32px;color:var(--gold)">✦ ✧ ✦</div>
+        <h3 style="font-family:'Amiri',serif;font-size:1.7rem;font-weight:400">Elegant &amp; Festive</h3>
+        <p style="color:var(--muted);line-height:1.9;margin-bottom:0">لمسة شيك، ألوان بتحبوها، وابتسامتكم هي أهم تفصيلة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp" id="rsvp">
+    <div class="section-inner reveal">
+      <div class="section-label">KINDLY REPLY</div>
+      <h2>وجودكم يسعدنا</h2>
+      <p class="rsvp-note">نتمنى نشوفكم ونشارككم أجمل لحظاتنا. لتفعيل تأكيد الحضور برسالة واتساب، أضف رقم الهاتف في إعدادات الدعوة قبل نشرها.</p>
+      <a class="rsvp-button" href="https://maps.app.goo.gl/UJx8rXFPTttcHjQU6" target="_blank" rel="noopener">احفظوا موعدنا ♥</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-names">عبدالرحمن &amp; هاجر</div>
+  <p>بكل الحب، شكرًا لمشاركتكم فرحتنا · 13.11.2026</p>
+</footer>
+
+<script>
+const openingScreen = document.getElementById('openingScreen');
+const openButton = document.getElementById('openInvitation');
+const music = document.getElementById('weddingNasheed');
+const heartsContainer = document.getElementById('floatingHearts');
+
+function createFloatingHeart() {
+  if (!heartsContainer || !openingScreen.isConnected) return;
+
+  const heart = document.createElement('span');
+  heart.className = 'floating-heart';
+  heart.textContent = Math.random() > 0.5 ? '♡' : '♥';
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.fontSize = (14 + Math.random() * 20) + 'px';
+  heart.style.animationDuration = (7 + Math.random() * 6) + 's';
+  heartsContainer.appendChild(heart);
+  heart.addEventListener('animationend', () => heart.remove());
+}
+
+// Create a gentle stream of floating hearts.
+for (let i = 0; i < 12; i++) {
+  setTimeout(createFloatingHeart, i * 350);
+}
+const heartsInterval = setInterval(() => {
+  if (!openingScreen.isConnected) {
+    clearInterval(heartsInterval);
+    return;
+  }
+  createFloatingHeart();
+}, 650);
+
+// Open invitation and attempt to play the selected nasheed.
+openButton.addEventListener('click', async () => {
+  openingScreen.classList.add('leaving');
+  document.body.classList.remove('closed');
+
+  try {
+    await music.play();
+  } catch (error) {
+    console.warn('Audio could not play. Check nasheed.mp3 is beside index.html.', error);
+  }
+
+  setTimeout(() => {
+    if (openingScreen.isConnected) openingScreen.remove();
+  }, 850);
+
+  setTimeout(() => {
+    document.getElementById('countdown').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 900);
+});
+
+// Wedding: Friday, 13 November 2026, 3 PM Egypt time (UTC+2).
+const target = new Date('2026-11-13T15:00:00+02:00').getTime();
+const pad = n => String(n).padStart(2, '0');
+
+function updateCountdown() {
+  let diff = target - Date.now();
+
+  if (diff <= 0) {
+    document.querySelector('.count-section h2').textContent = 'النهارده يوم فرحتنا!';
+    ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
+      document.getElementById(id).textContent = '00';
+    });
+    return;
+  }
+
+  const d = Math.floor(diff / 86400000);
+  diff %= 86400000;
+  const h = Math.floor(diff / 3600000);
+  diff %= 3600000;
+  const m = Math.floor(diff / 60000);
+  diff %= 60000;
+  const s = Math.floor(diff / 1000);
+
+  document.getElementById('days').textContent = d;
+  document.getElementById('hours').textContent = pad(h);
+  document.getElementById('minutes').textContent = pad(m);
+  document.getElementById('seconds').textContent = pad(s);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: .12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
